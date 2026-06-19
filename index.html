@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreaming Ball — Chase Yours.</title>
+  <meta name="description" content="Find street football games near you, join with a tap, pay by QR, and climb the ranks. Dreaming Ball — your city's pitch, in your pocket." />
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="Dreaming Ball — Chase Yours." />
+  <meta property="og:description" content="Find games, join the pitch, climb the ranks." />
+  <meta property="og:image" content="pictures/og_image.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="pictures/favicon.png" />
+
+  <!-- Fonts (same family as the app) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0A0A0F',
+            ink2: '#12121A',
+            pink: '#FF3CAC',
+            orange: '#FF8A00',
+            cyan: '#06B6D4',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-ink text-white font-body antialiased overflow-x-hidden">
+
+  <!-- Floating gradient blobs (background ambience) -->
+  <div class="blob blob--pink"></div>
+  <div class="blob blob--orange"></div>
+  <div class="grain"></div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <!-- IMG: brand/app_icon.png — your logo, transparent bg -->
+        <img class="ph h-9 w-9 rounded-lg object-contain" src="pictures/app_icon.png"
+             alt="Dreaming Ball" data-ratio="1/1" data-mini
+             data-ph="LOGO ICON (app_icon.png) — square, transparent" onerror="placeholder(this)">
+        <span class="font-display font-extrabold text-lg tracking-tight gradient-text">Dreaming Ball</span>
+      </a>
+      <a href="#download" class="btn-grad text-sm px-5 py-2.5 rounded-full font-display font-bold">Get the App</a>
+    </nav>
+  </header>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="top" class="relative min-h-screen flex items-center pt-28 pb-16">
+    <!-- IMG: images/hero_bg.jpg — see description -->
+    <img class="ph hero-bg" src="pictures/hero_bg.jpg" alt="" data-ratio="16/9"
+         data-ph="HERO PHOTO (hero_bg.jpg) — night street/futsal match, neon lights, energetic, moody & dark. Landscape ≥1920px. Tip: AI-overlay a glowing '+50 XP' near a player mid-shot."
+         onerror="placeholder(this)">
+    <div class="hero-veil"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
+      <!-- Left: copy -->
+      <div>
+        <span class="chip">⚡ Street football, reimagined</span>
+        <h1 class="mt-5 font-display font-extrabold leading-[0.95] text-5xl sm:text-6xl xl:text-7xl">
+          Find the game.<br><span class="gradient-text">Chase yours.</span>
+        </h1>
+        <p class="mt-6 text-white/85 text-lg max-w-md">
+          Discover pitches near you, join with a tap, pay by QR, and rack up XP every time you play. Your city's pitch — in your pocket.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#download" class="btn-grad px-7 py-3.5 rounded-full font-display font-bold">Download now</a>
+          <a href="#how" class="btn-ghost px-7 py-3.5 rounded-full font-display font-bold">How it works</a>
+        </div>
+        <!-- Stats strip -->
+        <div class="mt-12 flex gap-8">
+          <div><div class="stat gradient-text" data-count="120">120+</div><div class="stat-label">Games hosted</div></div>
+          <div><div class="stat gradient-text" data-count="800">800+</div><div class="stat-label">Players</div></div>
+          <div><div class="stat gradient-text" data-count="40">40+</div><div class="stat-label">Organisers</div></div>
+        </div>
+        <p class="mt-2 text-[11px] text-white/30">↑ replace with real numbers when you have them</p>
+      </div>
+
+      <!-- Right: 3D phone -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="phone tilt" data-tilt>
+          <div class="phone-notch"></div>
+          <!-- "Lights on" intro: fades away to reveal the screenshot -->
+          <div class="screen-intro"></div>
+          <!-- IMG: screenshots/home.png -->
+          <img class="ph phone-screen" src="pictures/home.png" alt="Home screen"
+               data-ratio="9/19.5"
+               data-ph="SCREENSHOT — home.png (Home feed, DARK mode, showing 'Near You' + 'Games This Week' cards)"
+               onerror="placeholder(this)">
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">scroll ↓</div>
+  </section>
+
+  <!-- ══════════ HOW IT WORKS ══════════ -->
+  <section id="how" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center max-w-2xl mx-auto" data-reveal>
+        <span class="chip">How it works</span>
+        <h2 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl">Three taps to the pitch</h2>
+      </div>
+
+      <div class="mt-16 grid md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="step" data-reveal>
+          <div class="step-num">01</div>
+          <div class="phone phone--sm tilt" data-tilt>
+            <img class="ph phone-screen" src="pictures/game_detail.png" alt="Find a game"
+                 data-ratio="9/19.5"
+                 data-ph="SCREENSHOT — game_detail.png (a game with field photo, price, Join button)"
+                 onerror="placeholder(this)">
+          </div>
+          <h3 class="step-title">Find a game</h3>
+          <p class="step-text">Browse pitches near you — by area, format and time. See who's already in.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step" data-reveal>
+          <div class="step-num">02</div>
+          <div class="phone phone--sm tilt" data-tilt>
+            <img class="ph phone-screen" src="pictures/payment_qr.png" alt="Pay by QR"
+                 data-ratio="9/19.5"
+                 data-ph="SCREENSHOT — payment_qr.png (the Scan-to-pay / QR screen)"
+                 onerror="placeholder(this)">
+          </div>
+          <h3 class="step-title">Pay by QR</h3>
+          <p class="step-text">Scan the organiser's QR, pay in your own app, tap “I've paid”. Spot secured.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step" data-reveal>
+          <div class="step-num">03</div>
+          <div class="phone phone--sm tilt" data-tilt>
+            <img class="ph phone-screen" src="pictures/celebrate.jpg" alt="Play and rank up"
+                 data-ratio="9/19.5"
+                 data-ph="PHOTO — celebrate.jpg (player celebrating a goal on a real pitch). Tip: AI-overlay a glowing 'GOAL  +30 XP' burst. Portrait crop."
+                 onerror="placeholder(this)">
+          </div>
+          <h3 class="step-title">Play &amp; rank up</h3>
+          <p class="step-text">Show up, ball out. Earn XP, climb tiers, and top your city's leaderboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FEATURES ══════════ -->
+  <section id="features" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center max-w-2xl mx-auto" data-reveal>
+        <span class="chip">Built for ballers</span>
+        <h2 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl">More than a booking app</h2>
+      </div>
+
+      <div class="mt-16 grid lg:grid-cols-2 gap-6">
+        <!-- Big feature: leaderboard -->
+        <div class="feature feature--tall" data-reveal>
+          <div class="feature-copy">
+            <h3 class="feature-title">Climb the <span class="gradient-text">leaderboard</span></h3>
+            <p class="feature-text">Every goal, assist and clean sheet earns XP. Rise through Bronze to Legend and rule your city.</p>
+          </div>
+          <div class="phone phone--sm tilt mx-auto mt-6" data-tilt>
+            <img class="ph phone-screen" src="pictures/leaderboard.png" alt="Leaderboard"
+                 data-ratio="9/19.5"
+                 data-ph="SCREENSHOT — leaderboard.png (rankings with player avatars + tier badges)"
+                 onerror="placeholder(this)">
+          </div>
+        </div>
+
+        <div class="grid gap-6">
+          <!-- Profile -->
+          <div class="feature feature--row" data-reveal>
+            <div class="feature-copy">
+              <h3 class="feature-title">Your <span class="gradient-text">player card</span></h3>
+              <p class="feature-text">XP bar, tier, goals, assists — your whole game in one profile.</p>
+            </div>
+            <div class="phone phone--xs tilt" data-tilt>
+              <img class="ph phone-screen" src="pictures/profile.png" alt="Profile"
+                   data-ratio="9/19.5"
+                   data-ph="SCREENSHOT — profile.png (XP bar, tier, stats)"
+                   onerror="placeholder(this)">
+            </div>
+          </div>
+          <!-- Live -->
+          <div class="feature feature--row" data-reveal>
+            <div class="feature-copy">
+              <h3 class="feature-title">Live <span class="gradient-text">match scoring</span></h3>
+              <p class="feature-text">Goals and stats tracked in real time, with ratings after the final whistle.</p>
+            </div>
+            <div class="phone phone--xs tilt" data-tilt>
+              <img class="ph phone-screen" src="pictures/live_match.png" alt="Live match"
+                   data-ratio="9/19.5"
+                   data-ph="SCREENSHOT — live_match.png (live scoring)"
+                   onerror="placeholder(this)">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Small features row -->
+      <div class="mt-6 grid sm:grid-cols-3 gap-6">
+        <div class="mini" data-reveal>
+          <div class="mini-icon">🔒</div>
+          <h4 class="mini-title">Private rooms</h4>
+          <p class="mini-text">Spin up a room, share a code, get your crew on one pitch.</p>
+        </div>
+        <div class="mini" data-reveal>
+          <div class="mini-icon">⭐</div>
+          <h4 class="mini-title">Rate organisers</h4>
+          <p class="mini-text">Star ratings keep games legit and organisers trusted.</p>
+        </div>
+        <div class="mini" data-reveal>
+          <div class="mini-icon">🔔</div>
+          <h4 class="mini-title">Instant alerts</h4>
+          <p class="mini-text">Get pinged when a spot opens or your payment's confirmed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOR ORGANISERS ══════════ -->
+  <section id="organisers" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 flex justify-center" data-reveal>
+        <div class="phone tilt" data-tilt>
+          <div class="phone-notch"></div>
+          <img class="ph phone-screen" src="pictures/agent_dashboard.png" alt="Organiser dashboard"
+               data-ratio="9/19.5"
+               data-ph="SCREENSHOT — agent_dashboard.png (organiser earnings: collected + commission + games)"
+               onerror="placeholder(this)">
+        </div>
+      </div>
+      <div class="order-1 lg:order-2" data-reveal>
+        <span class="chip">For organisers</span>
+        <h2 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl">Host games. <span class="gradient-text">Get paid.</span></h2>
+        <p class="mt-5 text-white/70 text-lg max-w-md">
+          Create a game in seconds, set your price and commission, and collect payments straight to your own account by QR. No middleman, no cut.
+        </p>
+        <ul class="mt-6 space-y-3 text-white/80">
+          <li class="check">Players pay you directly — you keep 100%</li>
+          <li class="check">Confirm payments &amp; manage your squad in-app</li>
+          <li class="check">Track every ringgit on your dashboard</li>
+        </ul>
+        <!-- Optional supporting photo -->
+        <img class="ph mt-8 rounded-2xl w-full max-w-sm object-cover" src="pictures/agent_paid.jpg" alt=""
+             data-ratio="16/10"
+             data-ph="PHOTO — agent_paid.jpg (organiser on phone receiving a TNG/bank transfer, or counting cash pitch-side). Tip: AI-overlay a glowing 'Commission +RM20'."
+             onerror="placeholder(this)">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DOWNLOAD ══════════ -->
+  <section id="download" class="relative py-28">
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="cta" data-reveal>
+        <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-center">Ready to ball?</h2>
+        <p class="mt-4 text-white/70 text-center max-w-md mx-auto">Download Dreaming Ball and find your next game tonight.</p>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8">
+          <!-- QR -->
+          <div class="qr-wrap">
+            <img class="ph qr" src="pictures/qr_download.png" alt="Download QR"
+                 data-ratio="1/1"
+                 data-ph="QR CODE — qr_download.png (links to your APK / Play Store). I can generate this once you have the link."
+                 onerror="placeholder(this)">
+            <span class="text-xs text-white/50 mt-3 block text-center">Scan to download</span>
+          </div>
+          <!-- Store badges -->
+          <div class="flex flex-col gap-3">
+            <img class="ph store-badge" src="pictures/badge_google.png" alt="Google Play"
+                 data-ratio="3.4/1"
+                 data-ph="BADGE — official Google Play badge (add when published)"
+                 onerror="placeholder(this)">
+            <img class="ph store-badge" src="pictures/badge_apple.png" alt="App Store"
+                 data-ratio="3.4/1"
+                 data-ph="BADGE — official App Store badge (add when published)"
+                 onerror="placeholder(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="relative border-t border-white/10 py-12">
+    <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <img class="ph h-8 w-8 rounded-lg object-contain" src="pictures/app_icon.png" alt=""
+             data-ratio="1/1" data-mini data-ph="ICON" onerror="placeholder(this)">
+        <span class="font-display font-bold gradient-text">Dreaming Ball</span>
+      </div>
+      <p class="text-white/40 text-sm">© 2026 Dreaming Ball. Chase Yours.</p>
+      <div class="flex gap-4 text-white/60">
+        <a href="#" class="hover:text-white transition">Instagram</a>
+        <a href="#" class="hover:text-white transition">TikTok</a>
+        <a href="#" class="hover:text-white transition">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
