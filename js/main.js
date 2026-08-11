@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────
-   Dreaming Ball — landing page interactions
+   Boundless F.C. — landing page interactions
    Native scrolling (smooth via CSS) + GSAP reveals + 3D tilt.
    ───────────────────────────────────────────────────────────── */
 

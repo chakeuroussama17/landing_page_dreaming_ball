@@ -1,4 +1,4 @@
-# Dreaming Ball — Landing Page Assets
+# Boundless — Landing Page Assets
 
 ✅ Put **every file in the `pictures/` folder** (one folder, flat). Use the
 **exact filenames** below — when a file exists, it auto-replaces the dashed

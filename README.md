@@ -1,6 +1,6 @@
-# Dreaming Ball — Landing Page
+# Boundless — Landing Page
 
-A hyper-dynamic, dark, Gen-Z promo page for the Dreaming Ball app.
+A hyper-dynamic, dark, Gen-Z promo page for the Boundless app.
 Static site: HTML + Tailwind (CDN) + GSAP + Lenis + VanillaTilt. No build step.
 
 ## Preview locally
@@ -35,6 +35,18 @@ pictures/         — ALL your images go here (see ASSETS.md for filenames)
 ```
 
 ## Notes
-- Brand colours: pink `#FF3CAC` → orange `#FF8A00`, dark `#0A0A0F`, cyan accent.
+- Brand colours come from the club crest and mirror the app's tokens
+  (`lib/core/theme/app_colors.dart`): gold `#C9A961`, deep gold `#8A6A2F`,
+  light gold `#F0D89B`, cream `#F5EBD2`, navy `#131C2E`, ink `#0A0F1A`.
+  They are defined once as CSS custom properties at the top of
+  `css/styles.css` and mirrored into the Tailwind config in `index.html` —
+  change both if you retune the palette.
+- Gold is a **light** colour, so anything filled with it takes dark (ink)
+  content. Surfaces that must carry white text use the deeper antique pair
+  `#5E4A20`→`#8F6F32`, which holds white at 4.7:1.
 - Replace the placeholder stat numbers in the hero with real figures.
 - Add real social links in the footer.
+- Add a 1200×630 `pictures/og_image.png` for social sharing; `og:image`
+  currently falls back to the crest.
+- The phone screenshots in `pictures/` are from the old pink/orange build and
+  no longer match the app. Recapture them from the rebranded app.

@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dreaming Ball — Chase Yours.</title>
-  <meta name="description" content="Find street football games near you, join with a tap, pay by QR, and climb the ranks. Dreaming Ball — your city's pitch, in your pocket." />
+  <title>Boundless — Chase Yours.</title>
+  <meta name="description" content="Find street football games near you, join with a tap, pay by QR, and climb the ranks. Boundless — your city's pitch, in your pocket." />
+
+  <meta name="theme-color" content="#C9A961" />
 
   <!-- Open Graph (social sharing) -->
-  <meta property="og:title" content="Dreaming Ball — Chase Yours." />
+  <meta property="og:title" content="Boundless — Chase Yours." />
   <meta property="og:description" content="Find games, join the pitch, climb the ranks." />
-  <meta property="og:image" content="pictures/og_image.png" />
+  <!-- Falls back to the crest. Swap for a 1200x630 og_image.png when you have one. -->
+  <meta property="og:image" content="pictures/crest.png" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/png" href="pictures/favicon.png" />
 
@@ -26,11 +30,15 @@
       theme: {
         extend: {
           colors: {
-            ink: '#0A0A0F',
-            ink2: '#12121A',
-            pink: '#FF3CAC',
-            orange: '#FF8A00',
-            cyan: '#06B6D4',
+            ink: '#0A0F1A',
+            ink2: '#131C2E',
+            navy: '#1A2438',
+            navyElev: '#222E47',
+            gold: '#C9A961',
+            goldDeep: '#8A6A2F',
+            goldLight: '#F0D89B',
+            cream: '#F5EBD2',
+            ice: '#8FB9E8',
           },
           fontFamily: {
             display: ['"Space Grotesk"', 'sans-serif'],
@@ -44,11 +52,11 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="bg-ink text-white font-body antialiased overflow-x-hidden">
+<body class="bg-ink text-cream font-body antialiased overflow-x-hidden">
 
   <!-- Floating gradient blobs (background ambience) -->
-  <div class="blob blob--pink"></div>
-  <div class="blob blob--orange"></div>
+  <div class="blob blob--gold"></div>
+  <div class="blob blob--navy"></div>
   <div class="grain"></div>
 
   <!-- ══════════ NAV ══════════ -->
@@ -57,9 +65,9 @@
       <a href="#top" class="flex items-center gap-2">
         <!-- IMG: brand/app_icon.png — your logo, transparent bg -->
         <img class="ph h-9 w-9 rounded-lg object-contain" src="pictures/app_icon.png"
-             alt="Dreaming Ball" data-ratio="1/1" data-mini
+             alt="Boundless F.C." data-ratio="1/1" data-mini
              data-ph="LOGO ICON (app_icon.png) — square, transparent" onerror="placeholder(this)">
-        <span class="font-display font-extrabold text-lg tracking-tight gradient-text">Dreaming Ball</span>
+        <span class="font-display font-extrabold text-lg tracking-tight gradient-text">Boundless</span>
       </a>
       <!-- Opens the live web app (the game) -->
       <a href="https://chakeuroussama17.github.io/dreaming_ball/" class="btn-grad text-sm px-5 py-2.5 rounded-full font-display font-bold">Play Now</a>
@@ -77,11 +85,15 @@
     <div class="relative z-10 mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
       <!-- Left: copy -->
       <div>
+        <!-- The crest, lit from within its own gold pool -->
+        <img class="ph crest-hero h-20 w-20 mb-6 object-contain" src="pictures/crest.png"
+             alt="Boundless F.C." data-ratio="1/1" data-mini
+             data-ph="CREST (crest.png)" onerror="placeholder(this)">
         <span class="chip">⚡ Street football, reimagined</span>
         <h1 class="mt-5 font-display font-extrabold leading-[0.95] text-5xl sm:text-6xl xl:text-7xl">
           Find the game.<br><span class="gradient-text">Chase yours.</span>
         </h1>
-        <p class="mt-6 text-white/85 text-lg max-w-md">
+        <p class="mt-6 text-cream/85 text-lg max-w-md">
           Discover pitches near you, join with a tap, pay by QR, and rack up XP every time you play. Your city's pitch — in your pocket.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
@@ -95,7 +107,7 @@
           <div><div class="stat gradient-text" data-count="800">800+</div><div class="stat-label">Players</div></div>
           <div><div class="stat gradient-text" data-count="40">40+</div><div class="stat-label">Organisers</div></div>
         </div>
-        <p class="mt-2 text-[11px] text-white/30">↑ replace with real numbers when you have them</p>
+        <p class="mt-2 text-[11px] text-cream/30">↑ replace with real numbers when you have them</p>
       </div>
 
       <!-- Right: 3D phone -->
@@ -254,10 +266,10 @@
       <div class="order-1 lg:order-2" data-reveal>
         <span class="chip">For organisers</span>
         <h2 class="mt-4 font-display font-extrabold text-4xl sm:text-5xl">Host games. <span class="gradient-text">Get paid.</span></h2>
-        <p class="mt-5 text-white/70 text-lg max-w-md">
+        <p class="mt-5 text-cream/70 text-lg max-w-md">
           Create a game in seconds, set your price and commission, and collect payments straight to your own account by QR. No middleman, no cut.
         </p>
-        <ul class="mt-6 space-y-3 text-white/80">
+        <ul class="mt-6 space-y-3 text-cream/80">
           <li class="check">Players pay you directly — you keep 100%</li>
           <li class="check">Confirm payments &amp; manage your squad in-app</li>
           <li class="check">Track every ringgit on your dashboard</li>
@@ -272,18 +284,18 @@
   </section>
 
   <!-- ══════════ FOOTER ══════════ -->
-  <footer class="relative border-t border-white/10 py-12">
+  <footer class="relative border-t border-gold/15 py-12">
     <div class="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-2">
         <img class="ph h-8 w-8 rounded-lg object-contain" src="pictures/app_icon.png" alt=""
              data-ratio="1/1" data-mini data-ph="ICON" onerror="placeholder(this)">
-        <span class="font-display font-bold gradient-text">Dreaming Ball</span>
+        <span class="font-display font-bold gradient-text">Boundless</span>
       </div>
-      <p class="text-white/40 text-sm">© 2026 Dreaming Ball. Chase Yours.</p>
-      <div class="flex gap-4 text-white/60">
-        <a href="#" class="hover:text-white transition">Instagram</a>
-        <a href="#" class="hover:text-white transition">TikTok</a>
-        <a href="#" class="hover:text-white transition">WhatsApp</a>
+      <p class="text-cream/40 text-sm">© 2026 Boundless F.C. Chase Yours.</p>
+      <div class="flex gap-4 text-cream/60">
+        <a href="#" class="hover:text-gold transition">Instagram</a>
+        <a href="#" class="hover:text-gold transition">TikTok</a>
+        <a href="#" class="hover:text-gold transition">WhatsApp</a>
       </div>
     </div>
   </footer>
